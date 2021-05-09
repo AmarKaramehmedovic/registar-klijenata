@@ -1,1 +1,2 @@
-Web aplikacija iz baze podataka, po pretraûenom imenu tvrtke, ispisuje podatke (zaposlenike, kontakt brojeve, mailove...) od klijenata te tvrtke.
+#registar-klijenata
+Web aplikacija iz baze podataka, po pretra≈æenom imenu tvrtke, ispisuje podatke (zaposlenike, kontakt brojeve, mailove...) od klijenata te tvrtke.
