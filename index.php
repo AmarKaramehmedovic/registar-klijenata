@@ -4,6 +4,12 @@
 	<link rel="stylesheet" media="screen" href="style.css">
 	<link rel="shortcut icon" href="slike/favicon.ico"/>
 	<meta charset="utf-8"/>	
+	<style>
+		#table1 th {
+		  background-color: #337DFF;
+		  color: white;
+		}
+	</style>
     </head>
         
 	<body>
@@ -25,6 +31,7 @@
 			<?php
 				echo '<div class="info" style="font-size:15px; text-align:left; margin-top:-6%;">';
 				echo '<p>Pozdrav, ' . $username . '! <br> Vaša tip dozvole je ' . $dozvola . '.</p>';
+				echo "<hr></hr>";
 				if($dozvola == 'administrator'){
 					echo '<p><a href="registracija.php">Registriraj novog korisnika</a></p>';
 				}
@@ -58,10 +65,10 @@
 							<th>Kontakt broj</th>
 						</tr>";
 					
-					$sql= "select *
-					from kontakti
-					where nazivSubjekta LIKE '%$input%'
-					order by nazivSubjekta";	
+					$sql= "SELECT *
+					FROM kontakti
+					WHERE nazivSubjekta LIKE '%$input%'
+					ORDER BY nazivSubjekta";	
 					
 					$result = mysqli_query($conn, $sql) or die("Error"); 
 					while($row = mysqli_fetch_array($result)){
@@ -86,9 +93,9 @@
 							<th>Kontakt broj</th>
 						</tr>";
 					
-					$sql= "select nazivSubjekta, kontaktBr
-					from subjekti
-					order by nazivSubjekta";				
+					$sql= "SELECT nazivSubjekta, kontaktBr
+					FROM subjekti
+					ORDER BY nazivSubjekta";				
 					
 					$result = mysqli_query($conn, $sql) or die("Error");                   
 					while($row = mysqli_fetch_array($result)){
