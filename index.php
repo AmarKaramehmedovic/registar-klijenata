@@ -8,17 +8,31 @@
         
 	<body>
 		<?php
-			$servername = "localhost:3306";
-			$user = "root";
-			$pass = "";	
-			$db = "registar_klijenata_db"; 
+			require_once "connection.php";
 			
-			$conn = mysqli_connect($servername, $user, $pass, $db) or die("Error" . mysqli_connect_error());
+			session_start();
+			if($_SESSION["loggedIn"] != true){
+				header("Location: login.php");
+				exit;
+			}
+			
+			$username = $_SESSION["username"];
+			$dozvola = $_SESSION["dozvola"];
+			
+			echo '<div class="info">';
+			echo '<p>Pozdrav, ' . $username . '! <br> Vaša tip dozvole je ' . $dozvola . '</p>';
+			if($dozvola == 'administrator'){
+				echo '<p><a href="registracija.php">Registriraj novog korisnika</a></p>';
+			}
+			echo '<p><a href="logout.php">Odjava</a></p>';
+			echo '</div>';
+			
+			
 		?>
 	
 		
 		<div class="header">
-			<h4><a href="index.php">REGISTAR KLIJENATA:</a></h4>
+			<h4><a href="/registar-klijenata">REGISTAR KLIJENATA:</a></h4>
 			<form action="index.php" method="GET" align="center">
 				<input id="acSubject" type="text" name="acSubject" placeholder="Traži subjekt" size="25" autofocus>
 			</form>
@@ -44,12 +58,12 @@
 							<th>Kontakt broj</th>
 						</tr>";
 					
-					$sql1= "select *
+					$sql= "select *
 					from kontakti
 					where nazivSubjekta LIKE '%$input%'
 					order by nazivSubjekta";	
 					
-					$result = mysqli_query($conn, $sql1) or die("Error"); 
+					$result = mysqli_query($conn, $sql) or die("Error"); 
 					while($row = mysqli_fetch_array($result)){
 						echo "<tr>";
 						echo "<td align='left' width='300'>
@@ -72,11 +86,11 @@
 							<th>Kontakt broj</th>
 						</tr>";
 					
-					$sql1= "select nazivSubjekta, kontaktBr
+					$sql= "select nazivSubjekta, kontaktBr
 					from subjekti
 					order by nazivSubjekta";				
 					
-					$result = mysqli_query($conn, $sql1) or die("Error");                   
+					$result = mysqli_query($conn, $sql) or die("Error");                   
 					while($row = mysqli_fetch_array($result)){
 						echo "<tr>";
 						echo "<td align='left' width='300'>
