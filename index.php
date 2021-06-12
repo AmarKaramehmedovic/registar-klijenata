@@ -18,22 +18,22 @@
 			
 			$username = $_SESSION["username"];
 			$dozvola = $_SESSION["dozvola"];
-			
-			echo '<div class="info">';
-			echo '<p>Pozdrav, ' . $username . '! <br> Vaša tip dozvole je ' . $dozvola . '</p>';
-			if($dozvola == 'administrator'){
-				echo '<p><a href="registracija.php">Registriraj novog korisnika</a></p>';
-			}
-			echo '<p><a href="logout.php">Odjava</a></p>';
-			echo '</div>';
-			
-			
 		?>
-	
 		
 		<div class="header">
-			<h4><a href="/registar-klijenata">REGISTAR KLIJENATA:</a></h4>
-			<form action="index.php" method="GET" align="center">
+			<h5><a href="/registar-klijenata">REGISTAR KLIJENATA:</a></h5>
+			<?php
+				echo '<div class="info" style="font-size:15px; text-align:left; margin-top:-6%;">';
+				echo '<p>Pozdrav, ' . $username . '! <br> Vaša tip dozvole je ' . $dozvola . '.</p>';
+				if($dozvola == 'administrator'){
+					echo '<p><a href="registracija.php">Registriraj novog korisnika</a></p>';
+				}
+				echo '<p><a href="noviSubjekt.php">Unesi novi subjekt</a></p>';
+				echo '<p><a href="noviKontakt.php">Unesi novi kontakt subjekta</a></p>';
+				echo '<p><a href="logout.php">Odjava</a></p>';
+				echo '</div>';
+			?>
+			<form style="margin-top:-5%;" action="index.php" method="GET" align="center">
 				<input id="acSubject" type="text" name="acSubject" placeholder="Traži subjekt" size="25" autofocus>
 			</form>
 		</div>

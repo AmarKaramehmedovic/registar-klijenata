@@ -10,11 +10,10 @@ body{
 	font-size: 40px;
 }
 
-.info{
-	text-align: right;
+
+.error{
+    color: red;
 }
-
-
 
 #table1 {
 	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;

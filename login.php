@@ -2,19 +2,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
+	<style>
+		
+	</style>
 </head>
-<body>
-    <form method="POST">
-        <label>Korisničko ime:<br>
-            <input name="username" type="text" required>
-        </label> <br>
+<body align="center">
+	<div class="header" style="font-family: Trebuchet MS, Arial, Helvetica, sans-serif;">
+		<h1><a href="/registar-klijenata">REGISTAR KLIJENATA:</a></h1>
+		<form method="POST">
+			<label>Korisničko ime:<br>
+				<input name="username" type="text" required>
+			</label> <br>
 
-        <label>Lozinka:<br>
-            <input name="password" type="password" required>
-        </label> <br>
+			<label>Lozinka:<br>
+				<input name="password" type="password" required>
+			</label> <br><br>
 
-        <input name="submit" type="submit" value="Posalji">
-    </form>
+			<input name="submit" type="submit" value="Prijava">
+		</form>
+	</div>
 
     <?php
 		require_once "connection.php";
