@@ -114,7 +114,9 @@
 			echo "</table>";
 			mysqli_close($conn);
             ?>
-	<div class="footer" style="text-align: center;">
+	
+	<div class="footer" style="text-align: center;margin-top: 180px; bottom:0; position: absolute; width:100%;">
+		<hr></hr>
 	  <p>Copyright© Amar Karamehmedović</p>
 	</div>
     </body>

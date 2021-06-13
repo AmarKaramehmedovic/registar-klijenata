@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2021 at 05:00 PM
+-- Generation Time: Jun 13, 2021 at 11:42 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.19
 
@@ -48,7 +48,15 @@ INSERT INTO `kontakti` (`id`, `nazivSubjekta`, `ime`, `prezime`, `email`, `konta
 (5, 'KRAŠ prehrambena industrija d.d.', 'Petra', 'Knežević', 'petrak@kras.hr', '0985678901'),
 (6, 'KRAŠ prehrambena industrija d.d.', 'Luka', 'Novak', 'lukan@kras.hr', '0986789012'),
 (7, 'Altis d.o.o.', 'Karlo', 'Petrović', 'karlop@altis.hr', '0997894561'),
-(8, 'Park mladenaca', 'Metju', 'Maljevac', 'metju@pmladenaca.hr', '098534543');
+(8, 'Batis d.o.o.', 'Matija', 'Maljević', 'matijam@batis.hr', '098534543'),
+(9, 'Batis d.o.o.', 'Petar', 'Živković', 'petarz@gmail.com', '0999876541'),
+(10, 'JAMNICA d.d.', 'Bojan', 'Jurić', 'bojan@jamnica.hr', '0986547897'),
+(11, 'JAMNICA d.d.', 'Domagoj', 'Grgić', 'domagojg@jamnica.hr', '0995467897'),
+(12, 'Altis d.o.o.', 'Zoran', 'Pavlović', 'zoranp@altis.hr', '0951234654'),
+(13, 'Kaufland d.o.o.', 'Ivan', 'Pavlović', 'ivanp@kaufland.hr', '098754134'),
+(14, 'Remaris', 'Goran', 'Horvat', 'goranh@remaris.hr', '0986348854'),
+(15, 'Prahir d.o.o.', 'Marija', 'Lac', 'marijal@prahir.hr', '0997645154'),
+(16, 'Zagrebačka banka d.d.', 'Berislav', 'Ivančić', 'berislavi@zaba.hr', '0956478548');
 
 -- --------------------------------------------------------
 
@@ -99,7 +107,14 @@ INSERT INTO `subjekti` (`id`, `nazivSubjekta`, `adresa`, `postBr`, `mjesto`, `ko
 (6, 'Altis d.o.o.', 'Bogovićeva 11', 10000, 'ZAGREB', '01 5432 555'),
 (7, 'Remaris', 'Frankopanska 12', 10000, 'ZAGREB', '01 4425 243'),
 (8, 'Matino j.d.o.o.', 'Gundulićeva 17', 10000, 'ZAGREB', '01 3555 253'),
-(9, 'Park mladenaca', 'park mladenaca 1', 10040, 'ZAGREB', '01 5646 342');
+(9, 'Batis d.o.o.', 'Draškovićeva 13', 10000, 'ZAGREB', '01 5646 342'),
+(10, 'Lapano j.d.o.o.', 'Ilica 252', 10090, 'ZAGREB', '01 9954 222'),
+(11, 'Prahir d.o.o.', 'Zagrebačka 57', 10410, 'ZAGREB', '01 622 6536'),
+(12, 'Kaufland d.o.o.', 'Avenija Dubrovnik 13', 10040, 'ZAGREB', '01 5546 897'),
+(13, 'King ICT d.o.o.', 'Buzinski prilaz 10', 10000, 'BUZIN', '01 9987 514'),
+(14, 'Patano d.o.o.', 'Ilica 12', 10000, 'ZAGREB', '01 5235 634'),
+(15, 'Majadero j.d.o.o.', 'Gajeva 3', 10000, 'ZAGREB', '01 3525 531'),
+(16, 'Buxar d.o.o.', 'Palmotićeva 12', 10000, 'ZAGREB', '01 6436 321');
 
 --
 -- Indexes for dumped tables
@@ -132,7 +147,7 @@ ALTER TABLE `subjekti`
 -- AUTO_INCREMENT for table `kontakti`
 --
 ALTER TABLE `kontakti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `korisnici`
@@ -144,7 +159,7 @@ ALTER TABLE `korisnici`
 -- AUTO_INCREMENT for table `subjekti`
 --
 ALTER TABLE `subjekti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
