@@ -9,6 +9,10 @@
 		  background-color: #337DFF;
 		  color: white;
 		}
+		
+		.footer{
+			text-align: center;	
+		}
 	</style>
     </head>
         
@@ -110,5 +114,8 @@
 			echo "</table>";
 			mysqli_close($conn);
             ?>
+	<div class="footer" style="text-align: center;">
+	  <p>Copyright© Amar Karamehmedović</p>
+	</div>
     </body>
 </html>

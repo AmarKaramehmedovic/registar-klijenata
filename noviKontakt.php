@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
 </head>
 <body>
+	<?php
+		require_once "connection.php";
+		session_start();
+		if(!isset($_SESSION["loggedIn"])){
+			header("Location: login.php");
+			exit;
+		}
+	?>
     <form method="POST">
-        <label>Naziv subjekta:<br/>
-        <input name="nazivSubjekta" type="text" required>
-        </label><br/>
+        <label>Naziv subjekta kontakta:<br/>
+        <select name="nazivSubjekta">
+		<?php		
+		$query = "SELECT nazivSubjekta FROM subjekti ORDER BY nazivSubjekta";
+		$result = mysqli_query($conn, $query) or die ("Error");		
+		while ($row = mysqli_fetch_array($result))
+		{
+			echo "<option value='".$row['nazivSubjekta']."'>".$row['nazivSubjekta']."</option>";
+		}
+		?>        
+		</select>
+        </label><br/><br/>
 
         <label>Ime:<br/>
         <input name="imeKontakta" type="text">
@@ -30,17 +47,8 @@
 
     <?php
 	echo '<p><a href="../registar-klijenata">Povratak na početnu</a></p>';
-	
-	require_once "connection.php";
-    
-	session_start();
-	if(!isset($_SESSION["loggedIn"])){
-		header("Location: login.php");
-		exit;
-	}
 
     if (isset($_POST["submit"])) {
-
 		$naziv = $_POST["nazivSubjekta"];
         $ime = $_POST["imeKontakta"];
         $prezime = $_POST["prezimeKontakta"];
