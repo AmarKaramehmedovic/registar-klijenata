@@ -8,7 +8,9 @@ UPUTE:
 Da bi aplikacija ispravno radila, mySQL bazu (koja se nalazi u repozitoriju), je potrebno importati kroz phpmyadmin.
 
 Login podaci za aplikaciju:
+
 admin login: admin/admin
+
 editor login: pero/pero
 
 *napomena: subjekti i kontakti su izmišljeni*
