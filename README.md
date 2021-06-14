@@ -9,8 +9,8 @@ Da bi aplikacija ispravno radila, mySQL bazu (koja se nalazi u repozitoriju), je
 
 Login podaci za aplikaciju:
 
-admin login: admin/admin
+* admin login: admin/admin
 
-editor login: pero/pero
+* editor login: pero/pero
 
 *napomena: subjekti i kontakti su izmišljeni*
