@@ -31,9 +31,9 @@
 		?>
 		
 		<div class="header">
-			<h5><a href="/registar-klijenata">REGISTAR KLIJENATA:</a></h5>
+			<h5 style="margin-top:10px; top:0; position: absolute; width:100%;"><a href="/registar-klijenata">REGISTAR KLIJENATA:</a></h5>
 			<?php
-				echo '<div class="info" style="font-size:15px; text-align:left; margin-top:-6%;">';
+				echo '<div class="info" style="font-size:15px; text-align:left; margin-top:10px;">';
 				echo '<p>Pozdrav, ' . $username . '! <br> Vaša tip dozvole je ' . $dozvola . '.</p>';
 				echo "<hr></hr>";
 				if($dozvola == 'administrator'){
