@@ -5,7 +5,7 @@ Kroz aplikaciju, osim pretrage je moguća i administracija, dodavanje novih subj
 VIDEO PREZENTACIJA: https://youtu.be/4umOStl9j2k
 
 UPUTE:
-Da bi aplikacija ispravno radila, mySQL bazu (koja se nalazi u repozitoriju), je potrebno importati kroz phpmyadmin.
+Da bi aplikacija ispravno radila, mySQL bazu (koja se nalazi u repozitoriju), potrebno je importati kroz phpmyadmin.
 
 Login podaci za aplikaciju:
 
